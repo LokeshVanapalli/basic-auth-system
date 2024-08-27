@@ -35,7 +35,31 @@ This project is a backend application built with Node.js, Express.js, and MongoD
 - **Security:** bcrypt, JWT
 
 ## Installation & Setup
-1. Clone the repository:
+
+### Prerequisites
+Make sure you have the following installed on your machine:
+- **Node.js:** [Download & Install Node.js](https://nodejs.org)
+- **MongoDB Account:** Create a MongoDB account and set up a cluster [here](https://www.mongodb.com/cloud/atlas).
+
+### Steps
+
+1. **Clone the Repository:**
+   Clone the project repository to your local machine using the following command:
    ```bash
    git clone <repository-url>
    cd <repository-name>
+2. **Create these variables in .env file:**
+   SECRET_KEY: A secret key used for JWT signing.
+   JWT_LIFETIME: The expiration time for JWT tokens (e.g., 1d, 7d).
+   MONGO_URI: The URI for connecting to your MongoDB database.
+3. **Instructions to Obtain MONGO_URI**
+    Go to MongoDB Atlas and log in.
+    Create a new cluster (or use an existing one).
+    Click the Connect button for your cluster.
+    Choose Connect your application.
+    Copy the connection string 
+    Replace <username>, <password>, and <dbname> with your credentials and database name.
+
+**Important:** Make sure to replace <password> with your actual database password and do not include angle brackets.
+4. **Install Dependencies:** npm install
+5. ***Start the Server:** npm start 
