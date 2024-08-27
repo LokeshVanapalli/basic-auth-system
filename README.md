@@ -49,17 +49,28 @@ Make sure you have the following installed on your machine:
    git clone <repository-url>
    cd <repository-name>
 2. **Create these variables in .env file:**
+
    SECRET_KEY: A secret key used for JWT signing.
+
    JWT_LIFETIME: The expiration time for JWT tokens (e.g., 1d, 7d).
+
    MONGO_URI: The URI for connecting to your MongoDB database.
 3. **Instructions to Obtain MONGO_URI**
+
     Go to MongoDB Atlas and log in.
+
     Create a new cluster (or use an existing one).
+
     Click the Connect button for your cluster.
+
     Choose Connect your application.
+
     Copy the connection string 
-    Replace <username>, <password>, and <dbname> with your credentials and database name.
+
+    Replace "username", "password", and "dbname" with your credentials and database name.
 
 **Important:** Make sure to replace <password> with your actual database password and do not include angle brackets.
+
 4. **Install Dependencies:** npm install
-5. ***Start the Server:** npm start 
+
+5. **Start the Server:** npm start 
