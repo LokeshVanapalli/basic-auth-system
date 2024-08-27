@@ -47,8 +47,9 @@
 
         if (response.status === 200) {
             const data = await response.json();
+            const shortUserId = data.UserId.length > 10 ? data.UserId.substring(0, 10) + "..." : data.UserId;
             document.getElementById('homeContainer').innerHTML = `<h3 style="margin-bottom: 10px; margin-top: 0px; color="black">Welcome to Home Page ${data.name}</h3>
-                <p>Your User ID is ${data.UserId}</p>`;
+                <p>Your User ID is ${shortUserId}</p>`;
         } else {
             console.error('Failed to fetch data from server');
         }
